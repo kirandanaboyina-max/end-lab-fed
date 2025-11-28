@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Attendance Tracker</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        .student-row {
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-left: 5px;
+        }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 400px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .present {
+            color: green;
+            font-weight: bold;
+        }
+        .absent {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Attendance Tracker</h2>
+
+<button onclick="dispatch({ type: 'RESET' })">Reset All</button>
+
+<div id="studentList"></div>
+
+<h3>Final Attendance List</h3>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="attendanceTable"></tbody>
+</tabl
